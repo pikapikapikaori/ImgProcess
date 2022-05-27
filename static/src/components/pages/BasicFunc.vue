@@ -29,7 +29,7 @@
               </el-steps>
 
               <div v-show="graying_active === 0" style="margin-top: 20px;">
-                <PictureChooseOne ref="graySelection"/>
+                <PictureChooseOne ref="grayingSelection"/>
               </div>
 
               <div v-show="graying_active === 1"
@@ -238,7 +238,59 @@
                          @click="logical_or_cancel">完成
               </el-button>
             </el-tab-pane>
-            <el-tab-pane label="逻辑非">消息中心</el-tab-pane>
+            <el-tab-pane label="逻辑非">
+              <el-steps :active="logical_not_active" finish-status="success" simple style="margin-top: 10px">
+                <el-step title="选择图片"></el-step>
+                <el-step title="输入参数"></el-step>
+                <el-step title="处理图片"></el-step>
+              </el-steps>
+
+              <div v-show="logical_not_active === 0" style="margin-top: 20px;">
+                <PictureChooseOne ref="logical_notSelection"/>
+              </div>
+
+              <div v-show="logical_not_active === 1"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <el-form :inline="true" :model="logical_notForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称">
+                      <el-input v-model="logical_notForm.res_name">
+                        <template slot="append">.jpg</template>
+                      </el-input>
+                    </el-form-item>
+                  </el-form>
+                </div>
+              </div>
+
+              <div v-show="logical_not_active === 2"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">原图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                       style="width: 400px; height:auto; margin-top: 30px">
+                </div>
+              </div>
+
+              <div v-show="logical_not_active === 3"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">结果图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                       style="width: 400px; height:auto; margin-top: 30px">
+                </div>
+              </div>
+
+              <el-button style="margin-left: 80%; margin-top: 10px;" @click="logical_not_cancel">取消</el-button>
+              <el-button v-show="logical_not_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="logical_not_next">下一步
+              </el-button>
+              <el-button v-show="logical_not_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="logical_not_cancel">完成
+              </el-button>
+
+            </el-tab-pane>
             <el-tab-pane label="图像相加">角色管理</el-tab-pane>
             <el-tab-pane label="图像相减">定时任务补偿</el-tab-pane>
             <el-tab-pane label="图像相乘">消息中心</el-tab-pane>
@@ -263,7 +315,6 @@ import Navigation from "@/components/global/Navigation"
 import Copyright from "@/components/global/Copyright"
 import Head from "@/components/global/Head"
 import PictureChooseOne from "@/components/global/PictureChooseOne"
-import axios from "axios";
 
 export default {
   name: "BasicFunc",
@@ -304,7 +355,12 @@ export default {
       logical_orForm: {
         res_name: ''
       },
-      logical_orLoad: false
+      logical_orLoad: false,
+      logical_not_active: 0,
+      logical_notForm: {
+        res_name: ''
+      },
+      logical_notLoad: false
     }
   },
   components: {
@@ -316,7 +372,7 @@ export default {
   methods: {
     async graying_next() {
       if (this.graying_active === 0) {
-        this.selection = this.$refs["graySelection"].multipleSelection;
+        this.selection = this.$refs["grayingSelection"].multipleSelection;
         this.displayImg[0] = this.selection[0];
         if (this.selection.length !== 1) {
           this.$alert('选择的图片数量不是一张！', '数量错误', {
@@ -556,6 +612,67 @@ export default {
       this.selection = [];
       this.displayImg = [{fileName: 'default_pic.jpg'}, {fileName: 'default_pic.jpg'}];
       this.logical_or_active = 0;
+      this.processResult = {
+        code: '',
+        message: '',
+        result_name: 'default_res.jpg'
+      };
+    },
+    async logical_not_next() {
+      if (this.logical_not_active === 0) {
+        this.selection = this.$refs["logical_notSelection"].multipleSelection;
+        this.displayImg[0] = this.selection[0];
+        if (this.selection.length !== 1) {
+          this.$alert('选择的图片数量不是一张！', '数量错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+
+      } else if (this.logical_not_active === 1) {
+        this.logical_notForm.res_name += '.jpg';
+      } else if (this.logical_not_active === 2) {
+        const axios = require('axios')
+
+        this.grayLoad = true;
+
+        await axios.get(
+            this.constant.data().BaseUrl + '/basic_func/logical_not', {
+              params: {
+                img_name: this.selection[0].fileName,
+                result_name: this.logical_notForm.res_name
+              }
+            }
+        ).then(
+            (res) => {
+              this.processResult = res.data;
+              if (this.processResult.code === '1') {
+                this.$message({
+                  message: '图片处理成功！',
+                  type: 'success'
+                });
+              } else if (this.processResult.code === '2') {
+                this.$message.error('图片处理成功！');
+              }
+            }
+        )
+
+        this.grayLoad = false;
+
+
+      } else if (this.logical_not_active === 3) {
+        this.logical_not_active = 0;
+
+        return
+      }
+
+
+      this.logical_not_active++;
+    },
+    logical_not_cancel() {
+      this.selection = [];
+      this.displayImg = [{fileName: 'default_pic.jpg'}, {fileName: 'default_pic.jpg'}];
+      this.logical_not_active = 0;
       this.processResult = {
         code: '',
         message: '',
