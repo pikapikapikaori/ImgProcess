@@ -501,7 +501,6 @@ import Navigation from "@/components/global/Navigation"
 import Copyright from "@/components/global/Copyright"
 import Head from "@/components/global/Head"
 import PictureChooseOne from "@/components/global/PictureChooseOne";
-import axios from "axios";
 
 export default {
   name: "Sharpen",
