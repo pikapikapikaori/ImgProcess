@@ -573,7 +573,7 @@ export default {
           fileName: 'default_pic.jpg'
         },
         {
-          fileName: 'default_pic2.jpg'
+          fileName: 'default_pic.jpg'
         }
       ],
        processResult: {
