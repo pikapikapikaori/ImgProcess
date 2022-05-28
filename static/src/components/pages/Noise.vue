@@ -10,7 +10,7 @@
         </div>
       </el-aside>
 
-      <el-container style="margin-top: 5%; margin-right: 236px"">
+      <el-container style="margin-top: 5%; margin-right: 236px">
         <el-header style="text-align: center; font-size: 36px">
           <div class="heading">
             {{ headmsg }}
