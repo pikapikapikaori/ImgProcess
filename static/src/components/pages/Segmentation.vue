@@ -21,7 +21,7 @@
           <el-divider content-position="left">边缘检测</el-divider>
           {{ intromsg }}
           <el-tabs type="border-card" style="margin-top: 30px; min-height: 80%">
-            <el-tab-pane label="Roberts算子">
+            <el-tab-pane label="Roberts 算子">
               <el-steps :active="roberts_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
@@ -109,7 +109,7 @@
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
-            <el-tab-pane label="Sobel算子">
+            <el-tab-pane label="Sobel 算子">
               <el-steps :active="sobel_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
@@ -197,7 +197,7 @@
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
-            <el-tab-pane label="Laplacian算子">
+            <el-tab-pane label="Laplacian 算子">
               <el-steps :active="laplacian_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
@@ -289,7 +289,7 @@
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
-            <el-tab-pane label="LoG算子">
+            <el-tab-pane label="LoG 算子">
               <el-steps :active="LoG_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
@@ -347,7 +347,7 @@
               </el-button>
 
             </el-tab-pane>
-            <el-tab-pane label="Canny算子">
+            <el-tab-pane label="Canny 算子">
               <el-steps :active="canny_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
@@ -428,7 +428,7 @@
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
-            <el-tab-pane label="HoughLines线条变化检测">
+            <el-tab-pane label="HoughLines 线条变化检测">
               <el-steps :active="hough_lines_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
@@ -486,7 +486,7 @@
               </el-button>
 
             </el-tab-pane>
-            <el-tab-pane label="HoughLinesP线条变化检测">
+            <el-tab-pane label="HoughLinesP 线条变化检测">
               <el-steps :active="hough_linesP_active" finish-status="success" simple style="margin-top: 10px">
                 <el-step title="选择图片"></el-step>
                 <el-step title="输入参数"></el-step>
