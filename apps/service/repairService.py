@@ -48,7 +48,7 @@ def sault_pepper_noise(img_name, result_name, ran_x1, ran_y1, ran_x2, ran_y2):
     if ran_x2 >= ran_y2:
         ran_x2, ran_y2 = utils.swap(ran_x2, ran_y2)
 
-    img = cv2.imread(img_path)
+    img = cv2.imread(img_path, 0)
     out = np.zeros(img.shape, np.uint8)
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):

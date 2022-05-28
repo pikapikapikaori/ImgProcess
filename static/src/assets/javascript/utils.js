@@ -14,6 +14,11 @@ export default {
             }
 
             return f === +f && f !== (f|0);
+        },
+        isMaxInteger(n) {
+            if (n === 'MAX')
+                return true
+            return Number.isInteger(n)
         }
     }
 }
