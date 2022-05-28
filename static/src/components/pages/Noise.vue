@@ -197,16 +197,16 @@ export default {
       selection: [],
       displayImg: [
         {
-          fileName: 'default_pic.jpg'
+          fileName: 'default_usage/default_pic.jpg'
         },
         {
-          fileName: 'default_pic.jpg'
+          fileName: 'default_usage/default_pic.jpg'
         }
       ],
        processResult: {
         code: '',
         message: '',
-        result_name: 'default_res.jpg'
+        result_name: 'default_usage/default_res.jpg'
       },
       gauss_noise_active: 0,
       gauss_noiseForm: {
@@ -234,7 +234,7 @@ export default {
     cancel() {
 
       this.selection = [];
-      this.displayImg = [{fileName: 'default_pic.jpg'}, {fileName: 'default_pic.jpg'}];
+      this.displayImg = [{fileName: 'default_usage/default_pic.jpg'}, {fileName: 'default_usage/default_pic.jpg'}];
 
       this.clear_active();
 
@@ -251,7 +251,7 @@ export default {
       this.processResult = {
         code: '',
         message: '',
-        result_name: 'default_res.jpg'
+        result_name: 'default_usage/default_res.jpg'
       };
     },
     clear_active() {
