@@ -1001,7 +1001,7 @@ export default {
 
       } else if (this.canny_active === 1) {
         if ((this.cannyForm.res_name === '') || (this.cannyForm.kernel_size === null) || (this.cannyForm.exp === null)) {
-          this.$alert('输出图像名称不能为空！<br>滤波核数不能为空！<br>权值不能为空', '参数错误', {
+          this.$alert('输出图像名称不能为空！<br>滤波核数不能为空！<br>权值不能为空！', '参数错误', {
             confirmButtonText: '确定',
             dangerouslyUseHTMLString: true
           });

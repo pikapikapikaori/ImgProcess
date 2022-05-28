@@ -587,10 +587,10 @@
                         <template slot="append">.jpg</template>
                       </el-input>
                     </el-form-item>
-                    <el-form-item label="活动区域"
+                    <el-form-item label="翻转方向"
                                   label-width="30%"
                                   style="align-content: center; margin-left: 10%; margin-right: 130%; width: 60%">
-                      <el-select v-model="flipForm.fli_choi" placeholder="请选择活动区域">
+                      <el-select v-model="flipForm.fli_choi" placeholder="请选择翻转方向">
                         <el-option label="水平翻转" value="horizontal"></el-option>
                         <el-option label="垂直翻转" value="vertical"></el-option>
                         <el-option label="对角翻转" value="diagonal"></el-option>
