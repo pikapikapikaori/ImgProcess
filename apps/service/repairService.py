@@ -133,7 +133,7 @@ def geometric_average_filter(img_name, result_name, filter_size_p, filter_size_q
                     if 0 <= i + m < img.shape[0] and 0 <= j + n < img.shape[1]:
                         mul *= img[i + m][j + n]
 
-            out[i][j] = int(pow(mul, 1 / (filter_size_p * filter_size_q)))
+            out[i][j] = int(pow(mul, float (1 / (filter_size_p * filter_size_q))))
 
     cv2.imwrite(result_path, out)
     return 1
