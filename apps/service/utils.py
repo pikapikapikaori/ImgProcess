@@ -16,6 +16,10 @@ def wrap_failure_json(result_name):
     return jsonify(return_data)
 
 
+def img_expand(img1, img2):
+    return img1, img2
+
+
 def swap(val1, val2):
     return val2, val1
 

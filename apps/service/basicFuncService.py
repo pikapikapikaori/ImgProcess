@@ -31,6 +31,9 @@ def logical_and(img_name1, img_name2, result_name):
 
     img1 = cv2.imread(img_path1, 0)
     img2 = cv2.imread(img_path2, 0)
+
+    img1, img2 = utils.img_expand(img1, img2)
+
     result = img1 & img2
     cv2.imwrite(result_path, result)
     return 1
@@ -43,6 +46,9 @@ def logical_or(img_name1, img_name2, result_name):
 
     img1 = cv2.imread(img_path1, 0)
     img2 = cv2.imread(img_path2, 0)
+
+    img1, img2 = utils.img_expand(img1, img2)
+
     result = img1 | img2
     cv2.imwrite(result_path, result)
     return 1
@@ -65,6 +71,9 @@ def add(img_name1, img_name2, result_name):
 
     img1 = cv2.imread(img_path1, 1)
     img2 = cv2.imread(img_path2, 1)
+
+    img1, img2 = utils.img_expand(img1, img2)
+
     result = cv2.add(img1, img2)
     cv2.imwrite(result_path, result)
     return 1
@@ -77,6 +86,9 @@ def subtract(img_name1, img_name2, result_name):
 
     img1 = cv2.imread(img_path1, 1)
     img2 = cv2.imread(img_path2, 1)
+
+    img1, img2 = utils.img_expand(img1, img2)
+
     result = cv2.subtract(img1, img2)
     cv2.imwrite(result_path, result)
     return 1
@@ -89,6 +101,9 @@ def multiply(img_name1, img_name2, result_name):
 
     img1 = cv2.imread(img_path1, 1)
     img2 = cv2.imread(img_path2, 1)
+
+    img1, img2 = utils.img_expand(img1, img2)
+
     result = cv2.multiply(img1, img2)
     cv2.imwrite(result_path, result)
     return 1
@@ -101,6 +116,9 @@ def divide(img_name1, img_name2, result_name):
 
     img1 = cv2.imread(img_path1, 1)
     img2 = cv2.imread(img_path2, 1)
+
+    img1, img2 = utils.img_expand(img1, img2)
+
     result = cv2.divide(img1, img2)
     cv2.imwrite(result_path, result)
     return 1
