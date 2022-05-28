@@ -78,6 +78,9 @@
               - opencv-python: 4.55.64
             </div>
           </div>
+          <p style="margin-left: 2em; margin-top: 0; margin-bottom: 0; line-height: 2em">
+            需要注意：/apps/assets/default_pic.jpg与/apps/results/default_res.jpg不可删除。
+          </p>
           <el-divider content-position="left">项目功能</el-divider>
           <p style="margin-left: 2em; margin-top: 0; margin-bottom: 0; line-height: 2em">
             项目功能：
@@ -157,7 +160,7 @@ export default {
   margin-left: 20%;
   margin-right: 20%;
   border: solid #333333;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .back_env .back_env_inline {
