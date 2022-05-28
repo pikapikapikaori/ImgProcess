@@ -71,10 +71,10 @@
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="graying_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="graying_active <= 2" :loading="grayingLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="graying_next">下一步
               </el-button>
-              <el-button v-show="graying_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="graying_active >= 3" :loading="grayingLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
 
@@ -308,11 +308,11 @@
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="logical_not_active <= 2" :loading="grayLoad"
+              <el-button v-show="logical_not_active <= 2" :loading="logical_notLoad"
                          style="margin-left: 10px; margin-top: 10px;"
                          @click="logical_not_next">下一步
               </el-button>
-              <el-button v-show="logical_not_active >= 3" :loading="grayLoad"
+              <el-button v-show="logical_not_active >= 3" :loading="logical_notLoad"
                          style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
@@ -621,10 +621,10 @@
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="flip_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="flip_active <= 2" :loading="flipLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="flip_next">下一步
               </el-button>
-              <el-button v-show="flip_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="flip_active >= 3" :loading="flipLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
@@ -657,7 +657,7 @@
 
                     <el-form-item label="坐标轴移动像素值"
                                   :rules="[
-                      { required: true, message: '名称不能为空'},
+                      { required: true, message: '像素值不能为空'},
                       { type: 'number', message: '像素值必须为数字值'}
                       ]"
                                   style="align-content: center; margin-left: 10%; margin-right: 10%; width:80%">
@@ -698,10 +698,10 @@
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="move_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="move_active <= 2" :loading="moveLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="move_next">下一步
               </el-button>
-              <el-button v-show="move_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="move_active >= 3" :loading="moveLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
@@ -734,7 +734,7 @@
                     <el-form-item label="图片旋转角度"
                                   label-width="30%"
                                   :rules=" [
-                                  { required: true, message:'名称不能为空'},
+                                  { required: true, message:'角度值不能为空'},
                                   { type: 'number', message: '角度值必须为数字值'}
                     ]"
                                   style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
@@ -768,10 +768,10 @@
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="rotate_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="rotate_active <= 2" :loading="rotateLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="rotate_next">下一步
               </el-button>
-              <el-button v-show="rotate_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="rotate_active >= 3" :loading="rotateLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
@@ -804,7 +804,7 @@
 
                     <el-form-item label="坐标轴放缩倍数"
                                   :rules="[
-                      { required: true, message: '名称不能为空'},
+                      { required: true, message: '倍数不能为空'},
                       { type: 'number', message: '倍数必须为数字值'}
                       ]"
                                   style="align-content: center; margin-left: 10%; margin-right: 10%; width:80%">
@@ -845,10 +845,10 @@
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="resize_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="resize_active <= 2" :loading="resizeLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="resize_next">下一步
               </el-button>
-              <el-button v-show="resize_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="resize_active >= 3" :loading="resizeLoad" style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
             </el-tab-pane>
@@ -893,7 +893,7 @@ export default {
         message: '',
         result_name: 'default_res.jpg'
       },
-      grayLoad: false,
+      grayingLoad: false,
       thre_active: 0,
       threForm: {
         res_name: ''
@@ -996,7 +996,7 @@ export default {
       this.resizeForm.size_x = null;
       this.resizeForm.size_y = null;
 
-      this.grayLoad = false;
+      this.grayingLoad = false;
       this.threLoad = false;
       this.logical_andLoad = false;
       this.logical_andLoad = false;
@@ -1056,7 +1056,7 @@ export default {
       } else if (this.graying_active === 2) {
         const axios = require('axios')
 
-        this.grayLoad = true;
+        this.grayingLoad = true;
 
         await axios.get(
             this.constant.data().BaseUrl + '/basic_func/graying', {
@@ -1079,7 +1079,7 @@ export default {
             }
         )
 
-        this.grayLoad = false;
+        this.grayingLoad = false;
 
 
       } else if (this.graying_active === 3) {
@@ -1300,7 +1300,7 @@ export default {
       } else if (this.logical_not_active === 2) {
         const axios = require('axios')
 
-        this.grayLoad = true;
+        this.logical_notLoad = true;
 
         await axios.get(
             this.constant.data().BaseUrl + '/basic_func/logical_not', {
@@ -1323,7 +1323,7 @@ export default {
             }
         )
 
-        this.grayLoad = false;
+        this.logical_notLoad = false;
 
 
       } else if (this.logical_not_active === 3) {
@@ -1608,7 +1608,7 @@ export default {
       } else if (this.flip_active === 2) {
         const axios = require('axios')
 
-        this.grayLoad = true;
+        this.flipLoad = true;
 
         await axios.get(
             this.constant.data().BaseUrl + '/basic_func/flip', {
@@ -1632,7 +1632,7 @@ export default {
             }
         )
 
-        this.grayLoad = false;
+        this.flipLoad = false;
 
 
       } else if (this.flip_active === 3) {
@@ -1678,7 +1678,7 @@ export default {
       } else if (this.move_active === 2) {
         const axios = require('axios')
 
-        this.grayLoad = true;
+        this.moveLoad = true;
 
         await axios.get(
             this.constant.data().BaseUrl + '/basic_func/move', {
@@ -1703,7 +1703,7 @@ export default {
             }
         )
 
-        this.grayLoad = false;
+        this.moveLoad = false;
 
 
       } else if (this.move_active === 3) {
@@ -1748,7 +1748,7 @@ export default {
       } else if (this.rotate_active === 2) {
         const axios = require('axios')
 
-        this.grayLoad = true;
+        this.rotateLoad = true;
 
         await axios.get(
             this.constant.data().BaseUrl + '/basic_func/rotate', {
@@ -1772,7 +1772,7 @@ export default {
             }
         )
 
-        this.grayLoad = false;
+        this.rotateLoad = false;
 
 
       } else if (this.rotate_active === 3) {
@@ -1824,7 +1824,7 @@ export default {
       } else if (this.resize_active === 2) {
         const axios = require('axios')
 
-        this.grayLoad = true;
+        this.resizeLoad = true;
 
         await axios.get(
             this.constant.data().BaseUrl + '/basic_func/resize', {
@@ -1849,7 +1849,7 @@ export default {
             }
         )
 
-        this.grayLoad = false;
+        this.resizeLoad = false;
 
 
       } else if (this.resize_active === 3) {
