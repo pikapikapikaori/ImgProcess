@@ -6,12 +6,14 @@ import router from './router'
 import Constant from "@/assets/javascript/Constant"
 import fileMaintain from "@/assets/javascript/fileMaintain"
 import "@/assets/css/globalContainer.css"
+import utils from "@/assets/javascript/utils"
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 Vue.prototype.constant = Constant
 Vue.prototype.fileMaintain = fileMaintain.fileMethods
+Vue.prototype.utils = utils.methods
 
 new Vue({
   el: '#app',

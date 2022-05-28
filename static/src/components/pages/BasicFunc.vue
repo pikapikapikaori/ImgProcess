@@ -35,8 +35,13 @@
               <div v-show="graying_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="grayingForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="grayingForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="grayingForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -51,7 +56,7 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -61,7 +66,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -88,8 +93,13 @@
               <div v-show="thre_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="threForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="threForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="threForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -104,7 +114,7 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -114,7 +124,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -140,8 +150,13 @@
               <div v-show="logical_and_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="logical_andForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="logical_andForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="logical_andForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -156,9 +171,9 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                   <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
-                       style="margin-left: 10px; width: 400px; height:auto; margin-top: 30px">
+                       style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -168,7 +183,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -196,8 +211,13 @@
               <div v-show="logical_or_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="logical_orForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="logical_orForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="logical_orForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -212,9 +232,9 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                   <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
-                       style="margin-left: 10px; width: 400px; height:auto; margin-top: 30px">
+                       style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -224,7 +244,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -252,8 +272,13 @@
               <div v-show="logical_not_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="logical_notForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="logical_notForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="logical_notForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -268,7 +293,7 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -278,15 +303,17 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
               <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-              <el-button v-show="logical_not_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="logical_not_active <= 2" :loading="grayLoad"
+                         style="margin-left: 10px; margin-top: 10px;"
                          @click="logical_not_next">下一步
               </el-button>
-              <el-button v-show="logical_not_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+              <el-button v-show="logical_not_active >= 3" :loading="grayLoad"
+                         style="margin-left: 10px; margin-top: 10px;"
                          @click="cancel">完成
               </el-button>
 
@@ -305,8 +332,13 @@
               <div v-show="add_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="addForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="addForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="addForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -321,9 +353,9 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                   <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
-                       style="margin-left: 10px; width: 400px; height:auto; margin-top: 30px">
+                       style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -333,7 +365,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -361,8 +393,13 @@
               <div v-show="subtract_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="subtractForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="subtractForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="subtractForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -377,9 +414,9 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                   <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
-                       style="margin-left: 10px; width: 400px; height:auto; margin-top: 30px">
+                       style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -389,7 +426,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -417,8 +454,13 @@
               <div v-show="multiply_active === 1"
                    style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
                 <div style="margin-left: 20%; margin-right: 20%">
-                  <el-form :inline="true" :model="multiplyForm" class="demo-form-inline">
-                    <el-form-item label="输出图像名称">
+                  <el-form :model="multiplyForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
                       <el-input v-model="multiplyForm.res_name">
                         <template slot="append">.jpg</template>
                       </el-input>
@@ -433,9 +475,9 @@
                   <span class="demonstration">原图片</span>
                   <br>
                   <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; height:auto; margin-top: 30px">
                   <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
-                       style="margin-left: 10px; width: 400px; height:auto; margin-top: 30px">
+                       style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -445,7 +487,7 @@
                   <span class="demonstration">结果图片</span>
                   <br>
                   <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                       style="width: 400px; height:auto; margin-top: 30px">
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
 
@@ -461,64 +503,355 @@
             </el-tab-pane>
             <el-tab-pane label="图像相除">
               <el-steps :active="divide_active" finish-status="success" simple style="margin-top: 10px">
-               <el-step title="选择图片"></el-step>
-               <el-step title="输入参数"></el-step>
-               <el-step title="处理图片"></el-step>
-             </el-steps>
+                <el-step title="选择图片"></el-step>
+                <el-step title="输入参数"></el-step>
+                <el-step title="处理图片"></el-step>
+              </el-steps>
 
-             <div v-show="divide_active === 0" style="margin-top: 20px;">
-               <PictureChooseOne ref="divideSelection"/>
-             </div>
+              <div v-show="divide_active === 0" style="margin-top: 20px;">
+                <PictureChooseOne ref="divideSelection"/>
+              </div>
 
-             <div v-show="divide_active === 1"
-                  style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
-               <div style="margin-left: 20%; margin-right: 20%">
-                 <el-form :inline="true" :model="divideForm" class="demo-form-inline">
-                   <el-form-item label="输出图像名称">
-                     <el-input v-model="divideForm.res_name">
-                       <template slot="append">.jpg</template>
-                     </el-input>
-                   </el-form-item>
-                 </el-form>
-               </div>
-             </div>
+              <div v-show="divide_active === 1"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <el-form :model="divideForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
+                      <el-input v-model="divideForm.res_name">
+                        <template slot="append">.jpg</template>
+                      </el-input>
+                    </el-form-item>
+                  </el-form>
+                </div>
+              </div>
 
-             <div v-show="divide_active === 2"
-                  style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
-               <div>
-                 <span class="demonstration">原图片</span>
-                 <br>
-                 <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
-                      style="width: 400px; height:auto; margin-top: 30px">
-                 <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
-                      style="margin-left: 10px; width: 400px; height:auto; margin-top: 30px">
-               </div>
-             </div>
+              <div v-show="divide_active === 2"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">原图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                       style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
 
-             <div v-show="divide_active === 3"
-                  style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
-               <div>
-                 <span class="demonstration">结果图片</span>
-                 <br>
-                 <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
-                      style="width: 400px; height:auto; margin-top: 30px">
-               </div>
-             </div>
+              <div v-show="divide_active === 3"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">结果图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
 
-             <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
-             <el-button v-show="divide_active <= 2" :loading="divideLoad"
-                        style="margin-left: 10px; margin-top: 10px;"
-                        @click="divide_next">下一步
-             </el-button>
-             <el-button v-show="divide_active >= 3" :loading="divideLoad"
-                        style="margin-left: 10px; margin-top: 10px;"
-                        @click="cancel">完成
-             </el-button>
+              <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
+              <el-button v-show="divide_active <= 2" :loading="divideLoad"
+                         style="margin-left: 10px; margin-top: 10px;"
+                         @click="divide_next">下一步
+              </el-button>
+              <el-button v-show="divide_active >= 3" :loading="divideLoad"
+                         style="margin-left: 10px; margin-top: 10px;"
+                         @click="cancel">完成
+              </el-button>
             </el-tab-pane>
-            <el-tab-pane label="图像翻转">定时任务补偿</el-tab-pane>
-            <el-tab-pane label="图像平移">消息中心</el-tab-pane>
-            <el-tab-pane label="图像旋转">角色管理</el-tab-pane>
-            <el-tab-pane label="图像放缩">定时任务补偿</el-tab-pane>
+            <el-tab-pane label="图像翻转">
+              <el-steps :active="flip_active" finish-status="success" simple style="margin-top: 10px">
+                <el-step title="选择图片"></el-step>
+                <el-step title="输入参数"></el-step>
+                <el-step title="处理图片"></el-step>
+              </el-steps>
+
+              <div v-show="flip_active === 0" style="margin-top: 20px;">
+                <PictureChooseOne ref="flipSelection"/>
+              </div>
+
+              <div v-show="flip_active === 1"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <el-form :model="flipForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
+                      <el-input v-model="flipForm.res_name">
+                        <template slot="append">.jpg</template>
+                      </el-input>
+                    </el-form-item>
+                    <el-form-item label="活动区域"
+                                  label-width="30%"
+                                  style="align-content: center; margin-left: 10%; margin-right: 130%; width: 60%">
+                      <el-select v-model="flipForm.fli_choi" placeholder="请选择活动区域">
+                        <el-option label="水平翻转" value="horizontal"></el-option>
+                        <el-option label="垂直翻转" value="vertical"></el-option>
+                        <el-option label="对角翻转" value="diagonal"></el-option>
+                      </el-select>
+                    </el-form-item>
+                  </el-form>
+                </div>
+              </div>
+
+              <div v-show="flip_active === 2"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">原图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <div v-show="flip_active === 3"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">结果图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
+              <el-button v-show="flip_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="flip_next">下一步
+              </el-button>
+              <el-button v-show="flip_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="cancel">完成
+              </el-button>
+            </el-tab-pane>
+            <el-tab-pane label="图像平移">
+              <el-steps :active="move_active" finish-status="success" simple style="margin-top: 10px">
+                <el-step title="选择图片"></el-step>
+                <el-step title="输入参数"></el-step>
+                <el-step title="处理图片"></el-step>
+              </el-steps>
+
+              <div v-show="move_active === 0" style="margin-top: 20px;">
+                <PictureChooseOne ref="moveSelection"/>
+              </div>
+
+              <div v-show="move_active === 1"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <el-form :model="moveForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
+                      <el-input v-model="moveForm.res_name">
+                        <template slot="append">.jpg</template>
+                      </el-input>
+                    </el-form-item>
+
+
+                    <el-form-item label="坐标轴移动像素值"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'},
+                      { type: 'number', message: '像素值必须为数字值'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width:80%">
+                      <el-col :span="7">
+                        <el-input placeholder="x轴移动像素值" v-model="moveForm.move_x">
+                        </el-input>
+                      </el-col>
+                      <el-col class="line" :span="2">,</el-col>
+                      <el-col :span="7">
+                        <el-input placeholder="y轴移动像素值" v-model="moveForm.move_y">
+                        </el-input>
+                      </el-col>
+                    </el-form-item>
+
+
+                  </el-form>
+                </div>
+              </div>
+
+              <div v-show="move_active === 2"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">原图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <div v-show="move_active === 3"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">结果图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
+              <el-button v-show="move_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="move_next">下一步
+              </el-button>
+              <el-button v-show="move_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="cancel">完成
+              </el-button>
+            </el-tab-pane>
+            <el-tab-pane label="图像旋转">
+              <el-steps :active="rotate_active" finish-status="success" simple style="margin-top: 10px">
+                <el-step title="选择图片"></el-step>
+                <el-step title="输入参数"></el-step>
+                <el-step title="处理图片"></el-step>
+              </el-steps>
+
+              <div v-show="rotate_active === 0" style="margin-top: 20px;">
+                <PictureChooseOne ref="rotateSelection"/>
+              </div>
+
+              <div v-show="rotate_active === 1"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <el-form :model="rotateForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                                  { required: true, message: '名称不能为空'}
+                                  ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
+                      <el-input v-model="rotateForm.res_name">
+                        <template slot="append">.jpg</template>
+                      </el-input>
+                    </el-form-item>
+
+                    <el-form-item label="图片旋转角度"
+                                  label-width="30%"
+                                  :rules=" [
+                                  { required: true, message:'名称不能为空'},
+                                  { type: 'number', message: '角度值必须为数字值'}
+                    ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
+                      <el-input v-model="rotateForm.angle">
+                      </el-input>
+                    </el-form-item>
+
+
+                  </el-form>
+                </div>
+              </div>
+
+              <div v-show="rotate_active === 2"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">原图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <div v-show="rotate_active === 3"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">结果图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
+              <el-button v-show="rotate_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="rotate_next">下一步
+              </el-button>
+              <el-button v-show="rotate_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="cancel">完成
+              </el-button>
+            </el-tab-pane>
+            <el-tab-pane label="图像放缩">
+              <el-steps :active="resize_active" finish-status="success" simple style="margin-top: 10px">
+                <el-step title="选择图片"></el-step>
+                <el-step title="输入参数"></el-step>
+                <el-step title="处理图片"></el-step>
+              </el-steps>
+
+              <div v-show="resize_active === 0" style="margin-top: 20px;">
+                <PictureChooseOne ref="resizeSelection"/>
+              </div>
+
+              <div v-show="resize_active === 1"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div style="margin-left: 20%; margin-right: 20%">
+                  <el-form :model="resizeForm" class="demo-form-inline">
+                    <el-form-item label="输出图像名称"
+                                  label-width="30%"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width: 60%">
+                      <el-input v-model="resizeForm.res_name">
+                        <template slot="append">.jpg</template>
+                      </el-input>
+                    </el-form-item>
+
+
+                    <el-form-item label="坐标轴放缩倍数"
+                                  :rules="[
+                      { required: true, message: '名称不能为空'},
+                      { type: 'number', message: '倍数必须为数字值'}
+                      ]"
+                                  style="align-content: center; margin-left: 10%; margin-right: 10%; width:80%">
+                      <el-col :span="7">
+                        <el-input placeholder="x轴放缩倍数" v-model="resizeForm.size_x">
+                        </el-input>
+                      </el-col>
+                      <el-col class="line" :span="2">,</el-col>
+                      <el-col :span="7">
+                        <el-input placeholder="y轴放缩倍数" v-model="resizeForm.size_y">
+                        </el-input>
+                      </el-col>
+                    </el-form-item>
+
+
+                  </el-form>
+                </div>
+              </div>
+
+              <div v-show="resize_active === 2"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">原图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <div v-show="resize_active === 3"
+                   style="text-align: center; margin-top: 20px; min-height: 375px; max-height: 375px">
+                <div>
+                  <span class="demonstration">结果图片</span>
+                  <br>
+                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                       style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
+                </div>
+              </div>
+
+              <el-button style="margin-left: 80%; margin-top: 10px;" @click="cancel">取消</el-button>
+              <el-button v-show="resize_active <= 2" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="resize_next">下一步
+              </el-button>
+              <el-button v-show="resize_active >= 3" :loading="grayLoad" style="margin-left: 10px; margin-top: 10px;"
+                         @click="cancel">完成
+              </el-button>
+            </el-tab-pane>
           </el-tabs>
         </el-main>
 
@@ -600,7 +933,33 @@ export default {
       divideForm: {
         res_name: ''
       },
-      divideLoad: false
+      divideLoad: false,
+      flip_active: 0,
+      flipForm: {
+        res_name: '',
+        fli_choi: 'horizontal'
+      },
+      flipLoad: false,
+      move_active: 0,
+      moveForm: {
+        res_name: '',
+        move_x: null,
+        move_y: null
+      },
+      moveLoad: false,
+      rotate_active: 0,
+      rotateForm: {
+        res_name: '',
+        angle: null
+      },
+      rotateLoad: false,
+      resize_active: 0,
+      resizeForm: {
+        res_name: '',
+        size_x: null,
+        size_y: null
+      },
+      resizeLoad: false
     }
   },
   components: {
@@ -626,6 +985,30 @@ export default {
       this.subtractForm.res_name = '';
       this.multiplyForm.res_name = '';
       this.divideForm.res_name = '';
+      this.flipForm.res_name = '';
+      this.flipForm.fli_choi = 'horizontal';
+      this.moveForm.res_name = '';
+      this.moveForm.move_x = null;
+      this.moveForm.move_y = null;
+      this.rotateForm.res_name = '';
+      this.rotateForm.angle = null;
+      this.resizeForm.res_name = '';
+      this.resizeForm.size_x = null;
+      this.resizeForm.size_y = null;
+
+      this.grayLoad = false;
+      this.threLoad = false;
+      this.logical_andLoad = false;
+      this.logical_andLoad = false;
+      this.logical_notLoad = false;
+      this.addLoad = false;
+      this.subtractLoad = false;
+      this.multiplyLoad = false;
+      this.divideLoad = false;
+      this.flipLoad = false;
+      this.moveLoad = false;
+      this.rotateLoad = false;
+      this.resizeLoad = false;
 
       this.processResult = {
         code: '',
@@ -642,7 +1025,11 @@ export default {
       this.add_active = 0;
       this.subtract_active = 0;
       this.multiply_active = 0;
-      this.divideForm = 0;
+      this.divide_active = 0;
+      this.flip_active = 0;
+      this.move_active = 0;
+      this.rotate_active = 0;
+      this.resize_active = 0;
     },
     async graying_next() {
       let tmp = this.graying_active;
@@ -659,7 +1046,7 @@ export default {
         }
 
       } else if (this.graying_active === 1) {
-        if (this.grayingForm.res_name === ''){
+        if (this.grayingForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -719,7 +1106,7 @@ export default {
         }
 
       } else if (this.thre_active === 1) {
-        if (this.threForm.res_name === ''){
+        if (this.threForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -780,7 +1167,7 @@ export default {
         }
 
       } else if (this.logical_and_active === 1) {
-        if (this.logical_andForm.res_name === ''){
+        if (this.logical_andForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -842,7 +1229,7 @@ export default {
         }
 
       } else if (this.logical_or_active === 1) {
-        if (this.logical_orForm.res_name === ''){
+        if (this.logical_orForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -903,7 +1290,7 @@ export default {
         }
 
       } else if (this.logical_not_active === 1) {
-        if (this.logical_notForm.res_name === ''){
+        if (this.logical_notForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -964,7 +1351,7 @@ export default {
         }
 
       } else if (this.add_active === 1) {
-        if (this.addForm.res_name === ''){
+        if (this.addForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -1026,7 +1413,7 @@ export default {
         }
 
       } else if (this.subtract_active === 1) {
-        if (this.subtractForm.res_name === ''){
+        if (this.subtractForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -1088,7 +1475,7 @@ export default {
         }
 
       } else if (this.multiply_active === 1) {
-        if (this.multiplyForm.res_name === ''){
+        if (this.multiplyForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -1150,7 +1537,7 @@ export default {
         }
 
       } else if (this.divide_active === 1) {
-        if (this.divideForm.res_name === ''){
+        if (this.divideForm.res_name === '') {
           this.$alert('输出图像名称不能为空！', '命名错误', {
             confirmButtonText: '确定'
           });
@@ -1195,6 +1582,284 @@ export default {
 
 
       this.divide_active++;
+    },
+    async flip_next() {
+      let tmp = this.flip_active;
+      this.clear_active();
+      this.flip_active = tmp;
+      if (this.flip_active === 0) {
+        this.selection = this.$refs["flipSelection"].multipleSelection;
+        this.displayImg[0] = this.selection[0];
+        if (this.selection.length !== 1) {
+          this.$alert('选择的图片数量不是一张！', '数量错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+
+      } else if (this.flip_active === 1) {
+        if (this.flipForm.res_name === '') {
+          this.$alert('输出图像名称不能为空！', '命名错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+        this.flipForm.res_name += '.jpg';
+      } else if (this.flip_active === 2) {
+        const axios = require('axios')
+
+        this.grayLoad = true;
+
+        await axios.get(
+            this.constant.data().BaseUrl + '/basic_func/flip', {
+              params: {
+                img_name: this.selection[0].fileName,
+                result_name: this.flipForm.res_name,
+                fli_choi: this.flipForm.fli_choi
+              }
+            }
+        ).then(
+            (res) => {
+              this.processResult = res.data;
+              if (this.processResult.code === '1') {
+                this.$message({
+                  message: '图片处理成功！',
+                  type: 'success'
+                });
+              } else if (this.processResult.code === '2') {
+                this.$message.error('图片处理成功！');
+              }
+            }
+        )
+
+        this.grayLoad = false;
+
+
+      } else if (this.flip_active === 3) {
+        this.flip_active = 0;
+
+        return
+      }
+
+
+      this.flip_active++;
+    },
+    async move_next() {
+      let tmp = this.move_active;
+      this.clear_active();
+      this.move_active = tmp;
+      if (this.move_active === 0) {
+        this.selection = this.$refs["moveSelection"].multipleSelection;
+        this.displayImg[0] = this.selection[0];
+        if (this.selection.length !== 1) {
+          this.$alert('选择的图片数量不是一张！', '数量错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+
+      } else if (this.move_active === 1) {
+        if ((this.moveForm.res_name === '') || (this.moveForm.move_x === null) || (this.moveForm.move_y === null)) {
+          this.$alert('输出图像名称不能为空！<br>坐标轴移动像素值不能为空！', '参数错误', {
+            confirmButtonText: '确定',
+            dangerouslyUseHTMLString: true
+          });
+          return
+        }
+        this.moveForm.move_x = parseInt(this.moveForm.move_x);
+        this.moveForm.move_y = parseInt(this.moveForm.move_y);
+        if ((!this.utils.isInteger(this.moveForm.move_x)) || (!this.utils.isInteger(this.moveForm.move_y))) {
+          this.$alert('坐标轴移动像素值必须为整数！', '参数错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+        this.moveForm.res_name += '.jpg';
+      } else if (this.move_active === 2) {
+        const axios = require('axios')
+
+        this.grayLoad = true;
+
+        await axios.get(
+            this.constant.data().BaseUrl + '/basic_func/move', {
+              params: {
+                img_name: this.selection[0].fileName,
+                result_name: this.moveForm.res_name,
+                move_x: this.moveForm.move_x,
+                move_y: this.moveForm.move_y
+              }
+            }
+        ).then(
+            (res) => {
+              this.processResult = res.data;
+              if (this.processResult.code === '1') {
+                this.$message({
+                  message: '图片处理成功！',
+                  type: 'success'
+                });
+              } else if (this.processResult.code === '2') {
+                this.$message.error('图片处理成功！');
+              }
+            }
+        )
+
+        this.grayLoad = false;
+
+
+      } else if (this.move_active === 3) {
+        this.move_active = 0;
+
+        return
+      }
+
+
+      this.move_active++;
+    },
+    async rotate_next() {
+      let tmp = this.rotate_active;
+      this.clear_active();
+      this.rotate_active = tmp;
+      if (this.rotate_active === 0) {
+        this.selection = this.$refs["rotateSelection"].multipleSelection;
+        this.displayImg[0] = this.selection[0];
+        if (this.selection.length !== 1) {
+          this.$alert('选择的图片数量不是一张！', '数量错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+
+      } else if (this.rotate_active === 1) {
+        if ((this.rotateForm.res_name === '') || (this.rotateForm.angle === null)) {
+          this.$alert('输出图像名称不能为空！<br>角度不能为空！', '参数错误', {
+            confirmButtonText: '确定',
+            dangerouslyUseHTMLString: true
+          });
+          return
+        }
+        this.rotateForm.angle = parseInt(this.rotateForm.angle);
+        if (!this.utils.isInteger(this.rotateForm.angle)) {
+          this.$alert('角度值必须为数字！', '参数错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+        this.rotateForm.res_name += '.jpg';
+      } else if (this.rotate_active === 2) {
+        const axios = require('axios')
+
+        this.grayLoad = true;
+
+        await axios.get(
+            this.constant.data().BaseUrl + '/basic_func/rotate', {
+              params: {
+                img_name: this.selection[0].fileName,
+                result_name: this.rotateForm.res_name,
+                angle: this.rotateForm.angle
+              }
+            }
+        ).then(
+            (res) => {
+              this.processResult = res.data;
+              if (this.processResult.code === '1') {
+                this.$message({
+                  message: '图片处理成功！',
+                  type: 'success'
+                });
+              } else if (this.processResult.code === '2') {
+                this.$message.error('图片处理成功！');
+              }
+            }
+        )
+
+        this.grayLoad = false;
+
+
+      } else if (this.rotate_active === 3) {
+        this.rotate_active = 0;
+
+        return
+      }
+
+
+      this.rotate_active++;
+    },
+    async resize_next() {
+      let tmp = this.resize_active;
+      this.clear_active();
+      this.resize_active = tmp;
+      if (this.resize_active === 0) {
+        this.selection = this.$refs["resizeSelection"].multipleSelection;
+        this.displayImg[0] = this.selection[0];
+        if (this.selection.length !== 1) {
+          this.$alert('选择的图片数量不是一张！', '数量错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+
+      } else if (this.resize_active === 1) {
+        if ((this.resizeForm.res_name === '') || (this.resizeForm.size_x === null) || (this.resizeForm.size_y === null)) {
+          this.$alert('输出图像名称不能为空！<br>坐标轴放缩倍数不能为空！', '参数错误', {
+            confirmButtonText: '确定',
+            dangerouslyUseHTMLString: true
+          });
+          return
+        }
+        this.resizeForm.size_x = parseFloat(this.resizeForm.size_x);
+        this.resizeForm.size_y = parseFloat(this.resizeForm.size_y);
+        if ((!this.utils.isFloat(this.resizeForm.size_x)) || (!this.utils.isFloat(this.resizeForm.size_y))) {
+          this.$alert('坐标轴放缩倍数必须为数字！', '参数错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+        if ((this.resizeForm.size_x) <= 0 || (this.resizeForm.size_y) <= 0) {
+          this.$alert('坐标轴放缩倍数必须为正实数！', '参数错误', {
+            confirmButtonText: '确定'
+          });
+          return
+        }
+        this.resizeForm.res_name += '.jpg';
+      } else if (this.resize_active === 2) {
+        const axios = require('axios')
+
+        this.grayLoad = true;
+
+        await axios.get(
+            this.constant.data().BaseUrl + '/basic_func/resize', {
+              params: {
+                img_name: this.selection[0].fileName,
+                result_name: this.resizeForm.res_name,
+                size_x: this.resizeForm.size_x,
+                size_y: this.resizeForm.size_y
+              }
+            }
+        ).then(
+            (res) => {
+              this.processResult = res.data;
+              if (this.processResult.code === '1') {
+                this.$message({
+                  message: '图片处理成功！',
+                  type: 'success'
+                });
+              } else if (this.processResult.code === '2') {
+                this.$message.error('图片处理成功！');
+              }
+            }
+        )
+
+        this.grayLoad = false;
+
+
+      } else if (this.resize_active === 3) {
+        this.resize_active = 0;
+
+        return
+      }
+
+
+      this.resize_active++;
     }
   }
 }
