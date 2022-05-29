@@ -1,8 +1,8 @@
 # ImgProcess 功能文档
 
-![Git](https://img.shields.io/badge/LICENSE-GPU3.0-00B336?style=plastic&link=https://github.com/pikapikapikaori/ImgProcess/blob/main/LICENSE&link=hhttps://github.com/pikapikapikaori/ImgProcess/blob/main/LICENSE)
-![Git](https://img.shields.io/badge/Python-3.8-3776AB?style=plastic&logo=python&logoColor=white)
-![Git](https://img.shields.io/badge/Vue.js-3.2-4FC08D?style=plastic&logo=vuedotjs&logoColor=white)
+[![LICENSE](https://img.shields.io/badge/LICENSE-GPU3.0-00B336?style=plastic)](https://github.com/pikapikapikaori/ImgProcess/blob/main/LICENSE)
+![Python](https://img.shields.io/badge/Python-3.8-3776AB?style=plastic&logo=python&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue.js-3.2-4FC08D?style=plastic&logo=vuedotjs&logoColor=white)
 
 ## 项目成员
 
