@@ -15,6 +15,8 @@
 - 后端：`cd`到根目录`/ImgProcess`下，使用命令`flask run`启动。请勿改变后端端口。
 - 前端：`cd`到目录`/ImgProcess/static`下，使用命令`npm run serve`启动。
 
+也可以在选择好安装了Python 3.8与Vue 3的环境后，运行根目录`/ImgProcess`下的`run.sh`来运行。
+
 ## 项目配置
 
 ### 运行端口
