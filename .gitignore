@@ -3,6 +3,6 @@
 /static/node_modules/
 /static/dist/
 /apps/assets/
-!/apps/assets/default_usage
+!/apps/assets/default_usage/
 /apps/results/
-!/apps/results/default_usage
+!/apps/results/default_usage/
