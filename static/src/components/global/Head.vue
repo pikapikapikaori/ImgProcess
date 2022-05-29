@@ -2,7 +2,7 @@
   <div class="header">
     <div class="head">
       <el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
-        查看已上传图片
+        上传图片
       </el-button>
 
       <el-drawer

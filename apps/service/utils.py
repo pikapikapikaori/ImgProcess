@@ -17,6 +17,47 @@ def wrap_failure_json(result_name):
 
 
 def img_expand(img1, img2):
+    shape1 = img1.shape
+    shape2 = img2.shape
+    row1 = shape1[0]
+    col1 = shape1[1]
+    row2 = shape2[0]
+    col2 = shape2[1]
+    if row1 > row2:
+        row = row1
+    else:
+        row = row2
+    if col1 > col2:
+        col = col1
+    else:
+        col = col2
+
+    if (row - row1) % 2 != 0:
+        r11 = int((row - row1) / 2)
+        r12 = r11 + 1
+    else:
+        r11 = r12 = int((row - row1) / 2)
+
+    if (col - col1) % 2 != 0:
+        c11 = int((col - col1) / 2)
+        c12 = c11 + 1
+    else:
+        c11 = c12 = int((col - col1) / 2)
+
+    if (row - row2) % 2 != 0:
+        r21 = int((row - row2) / 2)
+        r22 = r21 + 1
+    else:
+        r21 = r22 = int((row - row2) / 2)
+
+    if (col - col2) % 2 != 0:
+        c21 = int((col - col2) / 2)
+        c22 = c21 + 1
+    else:
+        c21 = c22 = int((col - col2) / 2)
+
+    img1 = cv2.copyMakeBorder(img1, r11, r12, c11, c12, cv2.BORDER_CONSTANT, value=[255, 255, 255])
+    img2 = cv2.copyMakeBorder(img2, r21, r22, c21, c22, cv2.BORDER_CONSTANT, value=[255, 255, 255])
     return img1, img2
 
 
