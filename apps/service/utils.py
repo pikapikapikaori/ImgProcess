@@ -7,11 +7,13 @@ from flask import jsonify
 
 
 def wrap_success_json(result_name):
+    result_name = 'http://127.0.0.1:5000/get_res_file/' + result_name
     return_data = {'code': '1', 'message': 'Success', 'result_name': result_name}
     return jsonify(return_data)
 
 
 def wrap_failure_json(result_name):
+    result_name = 'http://127.0.0.1:5000/get_res_file/' + result_name
     return_data = {'code': '2', 'message': 'Failure', 'result_name': result_name}
     return jsonify(return_data)
 

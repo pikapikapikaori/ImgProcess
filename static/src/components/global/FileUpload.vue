@@ -36,7 +36,11 @@ export default {
       if (!isLt2M) {
         this.$message.error('上传头像图片大小不能超过 2MB!');
       }
-      return isJPG && isLt2M;
+      if (this.fileMaintain.isExistFile(file.name)) {
+        this.$message.error('同名文件已存在!');
+      }
+
+      return isJPG && isLt2M && (!this.fileMaintain.isExistFile(file.name));
     },
     handleRemove(file, fileList) {
       console.log(file, fileList);
@@ -55,10 +59,7 @@ export default {
           type: 'success'
         });
       } else if (this.uploadResult.code === 0) {
-        this.$message({
-          message: this.uploadResult.msg,
-          type: 'warning'
-        });
+        this.$message.error(this.uploadResult.msg)
       }
     },
     handleError() {

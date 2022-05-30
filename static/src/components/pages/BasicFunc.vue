@@ -55,7 +55,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -65,7 +65,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -113,7 +113,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -123,7 +123,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -170,9 +170,9 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                  <img :src="this.displayImg[1].fileUrl" alt=""
                        style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -182,7 +182,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -231,9 +231,9 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                  <img :src="this.displayImg[1].fileUrl" alt=""
                        style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -243,7 +243,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -292,7 +292,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -302,7 +302,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -352,9 +352,9 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                  <img :src="this.displayImg[1].fileUrl" alt=""
                        style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -364,7 +364,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -413,9 +413,9 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                  <img :src="this.displayImg[1].fileUrl" alt=""
                        style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -425,7 +425,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -474,9 +474,9 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; height:auto; margin-top: 30px">
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                  <img :src="this.displayImg[1].fileUrl" alt=""
                        style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -486,7 +486,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -535,9 +535,9 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[1].fileName)" alt=""
+                  <img :src="this.displayImg[1].fileUrl" alt=""
                        style="margin-left: 10px; width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -547,7 +547,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -605,7 +605,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -615,7 +615,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -682,7 +682,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -692,7 +692,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -752,7 +752,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -762,7 +762,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -829,7 +829,7 @@
                 <div>
                   <span class="demonstration">原图片</span>
                   <br>
-                  <img :src="require('../../../../apps/assets/' + this.displayImg[0].fileName)" alt=""
+                  <img :src="this.displayImg[0].fileUrl" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -839,7 +839,7 @@
                 <div>
                   <span class="demonstration">结果图片</span>
                   <br>
-                  <img :src="require('../../../../apps/results/' + this.processResult.result_name)" alt=""
+                  <img :src="this.processResult.result_name" alt=""
                        style="width: auto; height: auto; max-width: 400px; max-height: 300px; margin-top: 30px">
                 </div>
               </div>
@@ -879,10 +879,10 @@ export default {
       selection: [],
       displayImg: [
         {
-          fileName: 'default_usage/default_pic.jpg'
+          fileName: '../../../assets/picture/default_pic.jpg'
         },
         {
-          fileName: 'default_usage/default_pic.jpg'
+          fileName: '../../../assets/picture/default_pic.jpg'
         }
       ],
       grayingForm: {
@@ -891,7 +891,7 @@ export default {
       processResult: {
         code: '',
         message: '',
-        result_name: 'default_usage/default_res.jpg'
+        result_name: '../../../assets/picture/default_pic.jpg'
       },
       grayingLoad: false,
       thre_active: 0,
@@ -972,7 +972,7 @@ export default {
     cancel() {
 
       this.selection = [];
-      this.displayImg = [{fileName: 'default_usage/default_pic.jpg'}, {fileName: 'default_usage/default_pic.jpg'}];
+      this.displayImg = [{fileName: '../../../assets/picture/default_pic.jpg'}, {fileName: '../../../assets/picture/default_pic.jpg'}];
 
       this.clear_active();
 
@@ -1013,7 +1013,7 @@ export default {
       this.processResult = {
         code: '',
         message: '',
-        result_name: 'default_usage/default_res.jpg'
+        result_name: '../../../assets/picture/default_pic.jpg'
       };
     },
     clear_active() {
@@ -1052,7 +1052,7 @@ export default {
           });
           return
         }
-        this.grayingForm.res_name += '.jpg';
+        this.grayingForm.res_name = this.utils.calculate_res_name(this.grayingForm.res_name);
       } else if (this.graying_active === 2) {
         const axios = require('axios')
 
@@ -1112,7 +1112,7 @@ export default {
           });
           return
         }
-        this.threForm.res_name += '.jpg';
+        this.threForm.res_name = this.utils.calculate_res_name(this.threForm.res_name);
       } else if (this.thre_active === 2) {
         const axios = require('axios')
 
@@ -1173,7 +1173,7 @@ export default {
           });
           return
         }
-        this.logical_andForm.res_name += '.jpg';
+        this.logical_andForm.res_name = this.utils.calculate_res_name(this.logical_andForm.res_name);
       } else if (this.logical_and_active === 2) {
         const axios = require('axios')
 
@@ -1235,7 +1235,7 @@ export default {
           });
           return
         }
-        this.logical_orForm.res_name += '.jpg';
+        this.logical_orForm.res_name = this.utils.calculate_res_name(this.logical_orForm.res_name);
       } else if (this.logical_or_active === 2) {
         const axios = require('axios')
 
@@ -1296,7 +1296,7 @@ export default {
           });
           return
         }
-        this.logical_notForm.res_name += '.jpg';
+        this.logical_notForm.res_name = this.utils.calculate_res_name(this.logical_notForm.res_name);
       } else if (this.logical_not_active === 2) {
         const axios = require('axios')
 
@@ -1357,7 +1357,7 @@ export default {
           });
           return
         }
-        this.addForm.res_name += '.jpg';
+        this.addForm.res_name = this.utils.calculate_res_name(this.addForm.res_name);
       } else if (this.add_active === 2) {
         const axios = require('axios')
 
@@ -1419,7 +1419,7 @@ export default {
           });
           return
         }
-        this.subtractForm.res_name += '.jpg';
+        this.subtractForm.res_name = this.utils.calculate_res_name(this.subtractForm.res_name);
       } else if (this.subtract_active === 2) {
         const axios = require('axios')
 
@@ -1481,7 +1481,7 @@ export default {
           });
           return
         }
-        this.multiplyForm.res_name += '.jpg';
+        this.multiplyForm.res_name = this.utils.calculate_res_name(this.multiplyForm.res_name);
       } else if (this.multiply_active === 2) {
         const axios = require('axios')
 
@@ -1543,7 +1543,7 @@ export default {
           });
           return
         }
-        this.divideForm.res_name += '.jpg';
+        this.divideForm.res_name = this.utils.calculate_res_name(this.divideForm.res_name);
       } else if (this.divide_active === 2) {
         const axios = require('axios')
 
@@ -1604,7 +1604,7 @@ export default {
           });
           return
         }
-        this.flipForm.res_name += '.jpg';
+        this.flipForm.res_name = this.utils.calculate_res_name(this.flipForm.res_name);
       } else if (this.flip_active === 2) {
         const axios = require('axios')
 
@@ -1674,7 +1674,7 @@ export default {
           });
           return
         }
-        this.moveForm.res_name += '.jpg';
+        this.moveForm.res_name = this.utils.calculate_res_name(this.moveForm.res_name);
       } else if (this.move_active === 2) {
         const axios = require('axios')
 
@@ -1744,7 +1744,7 @@ export default {
           });
           return
         }
-        this.rotateForm.res_name += '.jpg';
+        this.rotateForm.res_name = this.utils.calculate_res_name(this.rotateForm.res_name);
       } else if (this.rotate_active === 2) {
         const axios = require('axios')
 
@@ -1820,7 +1820,7 @@ export default {
           });
           return
         }
-        this.resizeForm.res_name += '.jpg';
+        this.resizeForm.res_name = this.utils.calculate_res_name(this.resizeForm.res_name);
       } else if (this.resize_active === 2) {
         const axios = require('axios')
 

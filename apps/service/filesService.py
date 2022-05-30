@@ -6,10 +6,8 @@ def resp_file_upload(file):
     file_name = file.filename
     file_path = 'apps/assets/' + file_name
 
-    print(file_path)
     if os.path.exists(file_path):
-        file.save(file_path)
-        return {'code': 0, 'msg': '同名文件已存在，替换原文件'}
+        return {'code': 0, 'msg': '同名文件已存在，保存失败'}
     else:
         file.save(file_path)
         return {'code': 1, 'msg': '保存文件成功'}
@@ -17,7 +15,7 @@ def resp_file_upload(file):
 
 def resp_file_download(requ_data):
     file_name = requ_data['file_name']
-    file_path = 'apps/results' + file_name
+    file_path = 'apps/results/' + file_name
 
     if os.path.exists(file_path):
         return send_file(file_path, as_attachment=True)

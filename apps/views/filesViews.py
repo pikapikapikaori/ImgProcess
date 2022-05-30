@@ -1,4 +1,6 @@
-from flask import Blueprint, jsonify, request
+import os
+
+from flask import Blueprint, jsonify, request, send_file
 
 from apps.service.filesService import resp_file_upload, resp_file_download
 
@@ -17,3 +19,19 @@ def file_upload():
 def file_download():
     requ_data = request.json
     return resp_file_download(requ_data)
+
+
+@app.route('/get_ori_file/<file_name>', methods=['GET'])
+def get_ori_file(file_name):
+    file_path = os.path.join('assets/', file_name)
+
+    # 向api返回（图片）文件
+    return send_file(file_path)
+
+
+@app.route('/get_res_file/<file_name>', methods=['GET'])
+def get_res_file(file_name):
+    file_path = os.path.join('results/', file_name)
+
+    # 向api返回（图片）文件
+    return send_file(file_path)

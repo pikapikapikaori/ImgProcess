@@ -4,9 +4,7 @@
 /static/.idea/
 /static/node_modules/
 /static/dist/
-# Python users' pictures, default-picture excluded
+# Python users' pictures
 /apps/assets/
-!/apps/assets/default_usage/
-# Python users' result-pictures, default-picture excluded
+# Python users' result-pictures
 /apps/results/
-!/apps/results/default_usage/

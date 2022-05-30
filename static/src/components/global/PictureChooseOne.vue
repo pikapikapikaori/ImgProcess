@@ -23,9 +23,9 @@
           min-width="40%">
         <template slot-scope="scope">
           <el-popover placement="top-start" title="" trigger="hover">
-            <img :src="require('../../../../apps/assets/' + scope.row.fileName)" alt=""
+            <img :src="'http://127.0.0.1:5000/get_ori_file/' + scope.row.fileName" alt=""
                  style="width: 150px; height:auto">
-            <img slot="reference" :src="require('../../../../apps/assets/' + scope.row.fileName)"
+            <img slot="reference" :src="'http://127.0.0.1:5000/get_ori_file/' + scope.row.fileName"
                  style="width: 70px; height: auto">
           </el-popover>
           <span>{{ scope.row.title }}</span>
@@ -52,6 +52,9 @@ export default {
   methods: {
     handleSelectionChange(val) {
       this.multipleSelection = val;
+      for (var i = 0; i < this.multipleSelection.length; i ++) {
+        this.multipleSelection[i].fileUrl = this.constant.data().OriFileBaseUrl + this.multipleSelection[i].fileName;
+      }
     },
     toggleSelection(rows) {
       if (rows) {
