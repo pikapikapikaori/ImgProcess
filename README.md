@@ -27,9 +27,9 @@
 ### 项目环境
 
 - 前端：
-  - Vue: 3.2.3
-  - element-ui: 2.1
-  - vue-router: 4.0.5
+  - Vue: 2.6.11
+  - element-ui: 2.15.8
+  - vue-router: 3.5.4
 - 后端：
   - Python: 3.8
   - Flask: 2.1.2

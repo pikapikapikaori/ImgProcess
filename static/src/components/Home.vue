@@ -51,11 +51,11 @@
           </ul>
           <div class="front_env">
             <div class="front_env_inline">
-              - Vue: 3.2.3
+              - Vue: 2.6.11
               <br>
-              - element-ui: 2.1
+              - element-ui: 2.15.8
               <br>
-              - vue-router: 4.0.5
+              - vue-router: 3.5.4
             </div>
           </div>
           <ul style="margin-left: 2em; line-height: 2em; list-style-type:circle">
