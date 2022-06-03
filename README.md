@@ -13,7 +13,7 @@
 ## 运行方法
 
 - 后端：`cd`到根目录`/ImgProcess`下，使用命令`flask run`启动。请勿改变后端端口。
-- 前端：`cd`到目录`/ImgProcess/static`下，使用命令`npm run serve`启动。
+- 前端：`cd`到目录`/ImgProcess/static`下，使用命令`npm run serve`启动；或者也可以在[这里](https://github.com/pikapikapikaori/ImgProcess/releases/tag/frontV1)下载打包好的前端文件`dist.zip`，解压后使用浏览器打开`dist`文件夹内的`index.html`文件即可。
 
 也可以在选择好安装了Python 3.8与Vue 3的环境后，运行根目录`/ImgProcess`下的`run.sh`来运行。
 
