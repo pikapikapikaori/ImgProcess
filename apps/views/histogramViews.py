@@ -4,7 +4,7 @@ from apps.service import histogramService, utils
 app = Blueprint('histogramViews', __name__)
 
 
-@app.route('/histogram/gray')
+@app.route('/api/histogram/gray')
 def gray_histogram():
     request_values = request.args
     request_values.to_dict()
@@ -16,7 +16,7 @@ def gray_histogram():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/histogram/bgr')
+@app.route('/api/histogram/bgr')
 def bgr_histogram():
     request_values = request.args
     request_values.to_dict()

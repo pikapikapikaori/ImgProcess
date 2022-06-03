@@ -5,7 +5,7 @@ from apps.service import smoothSharpenService, utils
 app = Blueprint('smoothSharpenViews', __name__)
 
 
-@app.route('/smooth_sharpen/smoo_neighbour_average')
+@app.route('/api/smooth_sharpen/smoo_neighbour_average')
 def smoo_neighbour_average():
     request_values = request.args
     request_values.to_dict()
@@ -18,7 +18,7 @@ def smoo_neighbour_average():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/smoo_median_filter')
+@app.route('/api/smooth_sharpen/smoo_median_filter')
 def smoo_median_filter():
     request_values = request.args
     request_values.to_dict()
@@ -31,7 +31,7 @@ def smoo_median_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_robert')
+@app.route('/api/smooth_sharpen/shar_robert')
 def shar_robert():
     request_values = request.args
     request_values.to_dict()
@@ -43,7 +43,7 @@ def shar_robert():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_laplacian')
+@app.route('/api/smooth_sharpen/shar_laplacian')
 def shar_laplacian():
     request_values = request.args
     request_values.to_dict()
@@ -55,7 +55,7 @@ def shar_laplacian():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_sobel')
+@app.route('/api/smooth_sharpen/shar_sobel')
 def shar_sobel():
     request_values = request.args
     request_values.to_dict()
@@ -67,7 +67,7 @@ def shar_sobel():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_prewitt')
+@app.route('/api/smooth_sharpen/shar_prewitt')
 def shar_prewitt():
     request_values = request.args
     request_values.to_dict()
@@ -79,7 +79,7 @@ def shar_prewitt():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/smoo_ideal_filter')
+@app.route('/api/smooth_sharpen/smoo_ideal_filter')
 def smoo_ideal_filter():
     request_values = request.args
     request_values.to_dict()
@@ -91,7 +91,7 @@ def smoo_ideal_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/smoo_barte_filter')
+@app.route('/api/smooth_sharpen/smoo_barte_filter')
 def smoo_barte_filter():
     request_values = request.args
     request_values.to_dict()
@@ -103,7 +103,7 @@ def smoo_barte_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/smoo_exp_filter')
+@app.route('/api/smooth_sharpen/smoo_exp_filter')
 def smoo_exp_filter():
     request_values = request.args
     request_values.to_dict()
@@ -115,7 +115,7 @@ def smoo_exp_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_ideal_high')
+@app.route('/api/smooth_sharpen/shar_ideal_high')
 def shar_ideal_high():
     request_values = request.args
     request_values.to_dict()
@@ -127,7 +127,7 @@ def shar_ideal_high():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_barte_filter')
+@app.route('/api/smooth_sharpen/shar_barte_filter')
 def shar_barte_filter():
     request_values = request.args
     request_values.to_dict()
@@ -139,7 +139,7 @@ def shar_barte_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/smooth_sharpen/shar_exp_filter')
+@app.route('/api/smooth_sharpen/shar_exp_filter')
 def shar_exp_filter():
     request_values = request.args
     request_values.to_dict()

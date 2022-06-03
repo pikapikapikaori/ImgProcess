@@ -5,7 +5,7 @@ from apps.service import segmentationService, utils
 app = Blueprint('segmentationViews', __name__)
 
 
-@app.route('/segmentation/roberts')
+@app.route('/api/segmentation/roberts')
 def roberts():
     request_values = request.args
     request_values.to_dict()
@@ -17,7 +17,7 @@ def roberts():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/segmentation/sobel')
+@app.route('/api/segmentation/sobel')
 def sobel():
     request_values = request.args
     request_values.to_dict()
@@ -29,7 +29,7 @@ def sobel():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/segmentation/laplacian')
+@app.route('/api/segmentation/laplacian')
 def laplacian():
     request_values = request.args
     request_values.to_dict()
@@ -41,7 +41,7 @@ def laplacian():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/segmentation/LoG')
+@app.route('/api/segmentation/LoG')
 def LoG():
     request_values = request.args
     request_values.to_dict()
@@ -53,7 +53,7 @@ def LoG():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/segmentation/canny')
+@app.route('/api/segmentation/canny')
 def canny():
     request_values = request.args
     request_values.to_dict()
@@ -65,7 +65,7 @@ def canny():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/segmentation/hough_lines')
+@app.route('/api/segmentation/hough_lines')
 def hough_lines():
     request_values = request.args
     request_values.to_dict()
@@ -77,7 +77,7 @@ def hough_lines():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/segmentation/hough_lines_p')
+@app.route('/api/segmentation/hough_lines_p')
 def hough_lines_p():
     request_values = request.args
     request_values.to_dict()

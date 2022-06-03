@@ -23,9 +23,9 @@
           min-width="40%">
         <template slot-scope="scope">
           <el-popover placement="top-start" title="" trigger="hover">
-            <img :src="'http://127.0.0.1:5000/get_ori_file/' + scope.row.fileName" alt=""
+            <img :src="'http://127.0.0.1:5000/api/get_ori_file/' + scope.row.fileName" alt=""
                  style="width: 150px; height:auto">
-            <img slot="reference" :src="'http://127.0.0.1:5000/get_ori_file/' + scope.row.fileName"
+            <img slot="reference" :src="'http://127.0.0.1:5000/api/get_ori_file/' + scope.row.fileName"
                  style="width: 70px; height: auto">
           </el-popover>
           <span>{{ scope.row.title }}</span>

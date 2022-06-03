@@ -5,7 +5,7 @@ from apps.service import repairService, utils
 app = Blueprint('repairViews', __name__)
 
 
-@app.route('/repair/gauss_noise')
+@app.route('/api/repair/gauss_noise')
 def gauss_noise():
     request_values = request.args
     request_values.to_dict()
@@ -17,7 +17,7 @@ def gauss_noise():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/sault_pepper_noise')
+@app.route('/api/repair/sault_pepper_noise')
 def sault_pepper_noise():
     request_values = request.args
     request_values.to_dict()
@@ -29,7 +29,7 @@ def sault_pepper_noise():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/arithmetic_average_filter')
+@app.route('/api/repair/arithmetic_average_filter')
 def arithmetic_average_filter():
     request_values = request.args
     request_values.to_dict()
@@ -41,7 +41,7 @@ def arithmetic_average_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/geometric_average_filter')
+@app.route('/api/repair/geometric_average_filter')
 def geometric_average_filter():
     request_values = request.args
     request_values.to_dict()
@@ -53,7 +53,7 @@ def geometric_average_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/harmonic_average_filter')
+@app.route('/api/repair/harmonic_average_filter')
 def harmonic_average_filter():
     request_values = request.args
     request_values.to_dict()
@@ -65,7 +65,7 @@ def harmonic_average_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/min_filter')
+@app.route('/api/repair/min_filter')
 def min_filter():
     request_values = request.args
     request_values.to_dict()
@@ -77,7 +77,7 @@ def min_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/max_filter')
+@app.route('/api/repair/max_filter')
 def max_filter():
     request_values = request.args
     request_values.to_dict()
@@ -89,7 +89,7 @@ def max_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/median_filter')
+@app.route('/api/repair/median_filter')
 def median_filter():
     request_values = request.args
     request_values.to_dict()
@@ -101,7 +101,7 @@ def median_filter():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/repair/range_filter')
+@app.route('/api/repair/range_filter')
 def range_filter():
     request_values = request.args
     request_values.to_dict()

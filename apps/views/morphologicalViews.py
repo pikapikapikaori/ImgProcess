@@ -5,7 +5,7 @@ from apps.service import morphologicalService, utils
 app = Blueprint('morphologicalViews', __name__)
 
 
-@app.route('/morphological/erode')
+@app.route('/api/morphological/erode')
 def erode():
     request_values = request.args
     request_values.to_dict()
@@ -17,7 +17,7 @@ def erode():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/morphological/dilate')
+@app.route('/api/morphological/dilate')
 def dilate():
     request_values = request.args
     request_values.to_dict()
@@ -29,7 +29,7 @@ def dilate():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/morphological/mor_open')
+@app.route('/api/morphological/mor_open')
 def mor_open():
     request_values = request.args
     request_values.to_dict()
@@ -41,7 +41,7 @@ def mor_open():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/morphological/mor_close')
+@app.route('/api/morphological/mor_close')
 def mor_close():
     request_values = request.args
     request_values.to_dict()

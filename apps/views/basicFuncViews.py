@@ -5,7 +5,7 @@ from apps.service import basicFuncService, utils
 app = Blueprint('basicFuncViews', __name__)
 
 
-@app.route('/basic_func/graying')
+@app.route('/api/basic_func/graying')
 def graying():
     request_values = request.args
     request_values.to_dict()
@@ -17,7 +17,7 @@ def graying():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/thresholding')
+@app.route('/api/basic_func/thresholding')
 def thresholding():
     request_values = request.args
     request_values.to_dict()
@@ -29,7 +29,7 @@ def thresholding():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/logical_and')
+@app.route('/api/basic_func/logical_and')
 def logical_and():
     request_values = request.args
     request_values.to_dict()
@@ -41,7 +41,7 @@ def logical_and():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/logical_or')
+@app.route('/api/basic_func/logical_or')
 def logical_or():
     request_values = request.args
     request_values.to_dict()
@@ -53,7 +53,7 @@ def logical_or():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/logical_not')
+@app.route('/api/basic_func/logical_not')
 def logical_not():
     request_values = request.args
     request_values.to_dict()
@@ -65,7 +65,7 @@ def logical_not():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/add')
+@app.route('/api/basic_func/add')
 def add():
     request_values = request.args
     request_values.to_dict()
@@ -77,7 +77,7 @@ def add():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/subtract')
+@app.route('/api/basic_func/subtract')
 def subtract():
     request_values = request.args
     request_values.to_dict()
@@ -89,7 +89,7 @@ def subtract():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/multiply')
+@app.route('/api/basic_func/multiply')
 def multiply():
     request_values = request.args
     request_values.to_dict()
@@ -101,7 +101,7 @@ def multiply():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/divide')
+@app.route('/api/basic_func/divide')
 def divide():
     request_values = request.args
     request_values.to_dict()
@@ -113,7 +113,7 @@ def divide():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/flip')
+@app.route('/api/basic_func/flip')
 def flip():
     request_values = request.args
     request_values.to_dict()
@@ -125,7 +125,7 @@ def flip():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/move')
+@app.route('/api/basic_func/move')
 def move():
     request_values = request.args
     request_values.to_dict()
@@ -138,7 +138,7 @@ def move():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/rotate')
+@app.route('/api/basic_func/rotate')
 def rotate():
     request_values = request.args
     request_values.to_dict()
@@ -150,7 +150,7 @@ def rotate():
     return utils.wrap_success_json(request_values['result_name'])
 
 
-@app.route('/basic_func/resize')
+@app.route('/api/basic_func/resize')
 def resize():
     request_values = request.args
     request_values.to_dict()
