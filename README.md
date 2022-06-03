@@ -3,7 +3,7 @@
 [![GitHub](https://img.shields.io/github/license/pikapikapikaori/ImgProcess?style=plastic)](./LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/pikapikapikaori/ImgProcess?style=plastic)
 ![Python](https://img.shields.io/badge/Python-v3.8-3776AB?style=plastic&logo=python&logoColor=white)
-![Vue](https://img.shields.io/badge/Vue.js-v3.2-4FC08D?style=plastic&logo=vuedotjs&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue.js-v2.6-4FC08D?style=plastic&logo=vuedotjs&logoColor=white)
 
 ## 项目成员
 
